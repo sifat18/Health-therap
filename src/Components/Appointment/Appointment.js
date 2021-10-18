@@ -15,7 +15,7 @@ const Appointment = () => {
 
                 </Col>
                 <Col className='order-sm-2 order-md-1'>
-                    <h2 className='text-center fs-1'>Book your Appointment Today!!!</h2>
+                    <h2 className='text-center text-white fs-1'>Book your Appointment Today!!!</h2>
                     <form className='mt-3 pt-2' onSubmit={handleForm}>
                         <input required className='inputs my-4 w-50' type="text" onBlur='{ }' placeholder='name' name="name" id="name" />
                         <input required className='inputs my-4 w-50' type="email" onBlur='{ }' placeholder='email' name="email" id="email" />

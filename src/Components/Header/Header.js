@@ -12,7 +12,7 @@ const Header = () => {
         </div>
     }
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className='header'>
                 <NavLink to='/home'><Navbar.Brand className='logo' href="#home">
                     <img
@@ -23,25 +23,27 @@ const Header = () => {
                         alt="React Bootstrap logo"
                     />Heath-Therap
                 </Navbar.Brand></NavLink>
-                <Nav variant="pills" className="ms-auto">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav variant="pills" className="ms-auto">
 
-                    <NavLink to='/home'> <Nav.Link href="#home">Home</Nav.Link></NavLink>
-                    <NavLink to='/about'> <Nav.Link href="#about">About</Nav.Link></NavLink>
-                    <NavLink to='/resource'> <Nav.Link href="#resource">Resources</Nav.Link></NavLink>
-                    <NavLink to='/appointment'> <Nav.Link href="#appointment">Appointment</Nav.Link></NavLink>
-                    {user.email &&
-                        <Navbar.Text>
-                            Signed in as <a href="#login">{user.displayName}</a>
-                        </Navbar.Text>
-                    }
-                    {user.email && <Nav.Link onClick={logOut}>Logout</Nav.Link>}
-                    {!user.email &&
-                        <NavLink to='/register'> <Nav.Link href="#register">Register</Nav.Link></NavLink>}
-                    {!user.email &&
-                        <NavLink to='/login'> <Nav.Link href="#login">Login</Nav.Link></NavLink>}
+                        <NavLink to='/home'> <Nav.Link href="#home">Home</Nav.Link></NavLink>
+                        <NavLink to='/about'> <Nav.Link href="#about">About</Nav.Link></NavLink>
+                        <NavLink to='/resource'> <Nav.Link href="#resource">Resources</Nav.Link></NavLink>
+                        <NavLink to='/appointment'> <Nav.Link href="#appointment">Appointment</Nav.Link></NavLink>
+                        {user.email &&
+                            <Navbar.Text>
+                                Signed in as <a href="#login">{user.displayName}</a>
+                            </Navbar.Text>
+                        }
+                        {user.email && <Nav.Link onClick={logOut}>Logout</Nav.Link>}
+                        {!user.email &&
+                            <NavLink to='/register'> <Nav.Link href="#register">Register</Nav.Link></NavLink>}
+                        {!user.email &&
+                            <NavLink to='/login'> <Nav.Link href="#login">Login</Nav.Link></NavLink>}
 
-                </Nav>
-
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     );

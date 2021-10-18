@@ -2,6 +2,13 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import { Accordion, Button, Card, Col, Container, Row } from 'react-bootstrap';
 import './Home.css';
+import faq from './faq.png';
+import tooth from './dental-care.png';
+import psycImg from './mental-disorder.png';
+import clock from './clock.png';
+import yoga from './yoga.png';
+import office from './office-hours.png';
+
 import useServices from '../../hooks/services';
 import { NavLink } from 'react-router-dom';
 const Home = () => {
@@ -14,11 +21,17 @@ const Home = () => {
             {/* schedule */}
             <Container className='box mb-5 pb-5'>
                 <div>
-                    <h2 className='text-center fs-2 fw-bold mt-3'>Schedule Overview</h2>
+                    <div className='d-flex justify-content-center align-items-center'>
+                        <img src={clock} alt="" height='50' width='50' />
+                        <h2 className='text-center fs-2 fw-bold mt-3'>Schedule Overview</h2>
+                    </div>
                     <hr className='w-50 mx-auto mb-2 mt-0' />
                     <Row>
                         <Col xs={6}>
-                            <h3 className='text-center mt-3 fs-4 fw-bold'>Yoga Classes</h3>
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <img src={yoga} alt="" height='50' width='50' />
+                                <h3 className='text-center mt-3 fs-4 fw-bold'>Yoga Classes</h3>
+                            </div>
                             <hr className='w-50 mx-auto mt-0 mb-2' />
                             <div className='text-center'>
                                 <p>Morning Classes ----- 7 am to 8:30 am </p>
@@ -27,7 +40,10 @@ const Home = () => {
                             </div>
                         </Col>
                         <Col xs={6}>
-                            <h3 className=' text-center mt-3 fs-4 fw-bold'>Office Hours</h3>
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <img src={office} alt="" height='50' width='50' />
+                                <h3 className=' text-center mt-3 fs-4 fw-bold'>Office Hours</h3>
+                            </div>
                             <hr className='w-50 mx-auto mt-0 mb-2' />
                             <div className='text-center'>
                                 <p>Monday-Friday ----- 9 am to 8:30 pm</p>
@@ -40,34 +56,39 @@ const Home = () => {
             </Container>
             {/* dental card data */}
             <Container className='my-5 pt-2'>
-                <h2 className='text-center fs-1 fw-normal'>Dental Services</h2>
+                <div className='d-flex justify-content-center align-items-center'>
+                    <img src={tooth} alt="" height='50' width='50' />
+                    <h2 className='text-center fs-1 fw-normal'><span className='text-success'>Dental</span> Services</h2>
+                </div>
                 <hr className='m-auto w-25 mb-4' />
                 <Row xs={1} md={3} className="g-4">
                     {dental?.map(data => (
                         <Col key={data.key} >
-                            <Card className="text-center border-0">
+                            <Card className="text-center zoom border-0">
                                 <Card.Body>
                                     <Card.Img variant="top" className='d-block mt-2 mb-4 mx-auto ' src={data.img} />
                                     <Card.Title>{data.name}</Card.Title>
                                     <Card.Text>{data.general.slice(0, 100)}</Card.Text>
-                                    <NavLink to={`/services/${data.key}`}><Button variant="primary">Go somewhere</Button></NavLink>
+                                    <NavLink to={`/services/${data.key}`}><Button variant="primary">See More</Button></NavLink>
                                 </Card.Body>
                             </Card>
                         </Col>
 
                     ))}
                 </Row>
-                <h2 className='text-center mt-5 fs-1 fw-normal'>Mental Services</h2>
-                <hr className='m-auto w-25 mb-4' />
+                <div className='d-flex justify-content-center align-items-center'>
+                    <img src={psycImg} alt="" className='my-auto mx-2  py-2' height='70' width='50' />
+                    <h2 className='text-center mt-5 fs-1 fw-normal'><span className='text-danger'>Psychological</span> Services</h2>
+                </div><hr className='m-auto w-25 mb-4' />
                 <Row xs={1} md={3} className="g-4">
                     {mental?.map(data => (
                         <Col key={data.key} >
-                            <Card className="text-center border-0">
+                            <Card className="text-center zoom border-0">
                                 <Card.Body>
                                     <Card.Img variant="top" className='d-block mt-2 mb-4 mx-auto ' src={data.img} />
                                     <Card.Title>{data.name}</Card.Title>
                                     <Card.Text>{data.general.slice(0, 100)}</Card.Text>
-                                    <NavLink to={`/services/${data.key}`}><Button variant="primary">Go somewhere</Button></NavLink>
+                                    <NavLink to={`/services/${data.key}`}><Button variant="primary">See More</Button></NavLink>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -77,8 +98,11 @@ const Home = () => {
             </Container>
             {/* FaQ */}
             <Container className='my-5 pt-5'>
-                <h2 className='text-center fs-1 fw-normal'>General Queries</h2>
-                <hr className='m-auto w-25 mb-4' />
+                <div className='d-flex justify-content-center align-items-center'>
+                    <img src={faq} alt="" height='50' width='50' />
+                    <h2 className='text-center fs-1 fw-normal'>General <span className='text-info'> Queries</span></h2>
+                </div>
+                <hr className='m-auto w-50 mb-4' />
                 <Row>
                     <Col xs={12} md={6}>
                         <img className='d-block w-100' src="https://img.freepik.com/free-vector/tiny-people-sitting-standing-near-giant-faq_74855-7879.jpg?size=626&ext=jpg&ga=GA1.2.1377562154.1621728000" alt="" />

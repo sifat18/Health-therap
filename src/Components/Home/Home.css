@@ -9,3 +9,10 @@
     border: 1px solid white; 
     border-radius: 25px;
 }
+.zoom {
+    transition: transform .2s; 
+
+  }
+  
+  .zoom:hover {
+    transform: scale(1.12);  }

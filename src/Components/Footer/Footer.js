@@ -9,7 +9,21 @@ const Footer = () => {
                     <img src={imgfoot} height='100' alt="" />
                     <h3 className='text-white'>Therap Help</h3>
                 </Col>
-                <Col xs={6}></Col>
+                <Col xs={6}>
+                    <Row>
+                        <Col className='d-flex my-5 pt-5 text-white flex-column'>
+                            <p className='fs-4'>About</p>
+                            <p className='fs-4'>Resources</p>
+                            <p className='fs-4'>Tips and trircks</p>
+                            <p className='fs-4'>Appointment</p>
+                        </Col>
+                        <Col className='d-flex my-5 pt-5 text-white flex-column'>
+                            <p className='fs-4'>Contact us</p>
+                            <p className='fs-4'><i className="fab fa-facebook me-2"></i>Facebook</p>
+                            <p className='fs-4'><i className="fab fa-instagram me-2"></i>Instagram</p>
+                        </Col>
+                    </Row>
+                </Col>
             </Row>
         </Container>
     );

@@ -26,7 +26,7 @@ const About = () => {
             {/* about segment */}
             <Container>
                 <Row>
-                    <Col xs={12} md={7} className=' mt-5  order-sm-2 order-md-1'>
+                    <Col xs={12} md={7} className=' mt-5  order-md-1 order-sm-2 '>
                         <h3 className='text-start fs-2 fw-bold'>We support people to do the extraordinary everyday </h3>
                         <div className="d-flex ">
                             <hr className='d-block text-start w-75 me-1 bg-info' />
@@ -36,7 +36,7 @@ const About = () => {
 
                             </div></div>
                     </Col>
-                    <Col xs={12} md={5} className='mt-5 order-sm-1 order-md-2'>
+                    <Col xs={12} md={5} className='mt-5 order-md-2 order-sm-1 '>
                         <img className='d-block w-100 my-5 ' src="https://media.istockphoto.com/photos/healthcare-workers-portrait-picture-id1284636209?b=1&k=20&m=1284636209&s=170667a&w=0&h=j_vm0DELoS5ZhzbqYAI60nHoO57jHlrGIyLgqBs6Wyg=" alt="" />
                     </Col>
                 </Row>
