@@ -1,0 +1,10 @@
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next{
+background:grey;
+border-radius: 100%;
+}
+
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover{
+background:brown;
+}

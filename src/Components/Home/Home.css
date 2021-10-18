@@ -1,0 +1,11 @@
+.box{
+    background-color: floralwhite;
+    margin: 0px auto;
+    min-height: 250px;
+    color: darkslateblue;
+    width: 70%;
+    position: relative;
+    top: -30px;
+    border: 1px solid white; 
+    border-radius: 25px;
+}

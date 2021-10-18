@@ -1,0 +1,10 @@
+.banner{
+    background-color: rgba(3, 27, 243, 0.74);
+}
+.banner-Text{
+    text-align: center;
+    margin: 100px auto;
+    color: whitesmoke;
+    font-weight: 670;
+    font-size: 1.5rem;
+}

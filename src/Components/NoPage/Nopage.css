@@ -1,0 +1,6 @@
+.error-page{
+    background-image: url('./error-404.jpg');
+    background-position: center;
+    height: 100vh;
+    background-size: 100% 100%;
+}
