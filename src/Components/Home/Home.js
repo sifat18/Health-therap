@@ -1,13 +1,18 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import { Accordion, Button, Card, Col, Container, Row } from 'react-bootstrap';
-import cardImg1 from './hospital_design.jpg';
-import cardImg2 from './doctor.png';
-import cardImg3 from './log.png';
+// import cardImg1 from './hospital_design.jpg';
+// import cardImg2 from './doctor.png';
+// import cardImg3 from './log.png';
 import './Home.css';
+import useServices from '../../hooks/services';
+import { NavLink } from 'react-router-dom';
 const Home = () => {
-    let cardMsg1 = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium, quibusdam quod quo ipsum amet sit necessitatibus harum aspernatur molestias facilis consequuntur ex nesciunt, fugiat doloremque dolorem eum blanditiis! Labore.";
-    const homeCard = [{ "img": cardImg1, "msg": cardMsg1 }, { "img": cardImg2, "msg": cardMsg1 }, { "img": cardImg3, "msg": cardMsg1 }]
+    // let cardMsg1 = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium, quibusdam quod quo ipsum amet sit necessitatibus harum aspernatur molestias facilis consequuntur ex nesciunt, fugiat doloremque dolorem eum blanditiis! Labore.";
+    // const homeCard = [{ "img": cardImg1, "msg": cardMsg1 }, { "img": cardImg2, "msg": cardMsg1 }, { "img": cardImg3, "msg": cardMsg1 }]
+    const [services] = useServices();
+    const dental = services.filter(data => data.category === 'dental')
+    const mental = services.filter(data => data.category === 'mental')
     return (
         <>
             <Banner></Banner>
@@ -38,18 +43,36 @@ const Home = () => {
                     </Row>
                 </div>
             </Container>
-            {/* card data */}
-            <Container className='my-5 pt-5'>
-                <h2 className='text-center fs-1 fw-normal'>Facilities</h2>
-                <hr className='m-auto w-50 mb-4' />
+            {/* dental card data */}
+            <Container className='my-5 pt-2'>
+                <h2 className='text-center fs-1 fw-normal'>Dental Services</h2>
+                <hr className='m-auto w-25 mb-4' />
                 <Row xs={1} md={3} className="g-4">
-                    {homeCard.map(data => (
-                        <Col >
+                    {dental?.map(data => (
+                        <Col key={data.key} >
                             <Card className="text-center border-0">
                                 <Card.Body>
-                                    <Card.Img variant="top" className='d-block mt-2 mb-4 mx-auto w-50' src={data.img} />
-                                    <Card.Text>{data.msg}</Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                    <Card.Img variant="top" className='d-block mt-2 mb-4 mx-auto ' src={data.img} />
+                                    <Card.Title>{data.name}</Card.Title>
+                                    <Card.Text>{data.general.slice(0, 100)}</Card.Text>
+                                    <NavLink to={`/services/${data.key}`}><Button variant="primary">Go somewhere</Button></NavLink>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
+                    ))}
+                </Row>
+                <h2 className='text-center mt-5 fs-1 fw-normal'>Mental Services</h2>
+                <hr className='m-auto w-25 mb-4' />
+                <Row xs={1} md={3} className="g-4">
+                    {mental?.map(data => (
+                        <Col key={data.key} >
+                            <Card className="text-center border-0">
+                                <Card.Body>
+                                    <Card.Img variant="top" className='d-block mt-2 mb-4 mx-auto ' src={data.img} />
+                                    <Card.Title>{data.name}</Card.Title>
+                                    <Card.Text>{data.general.slice(0, 100)}</Card.Text>
+                                    <NavLink to={`/services/${data.key}`}><Button variant="primary">Go somewhere</Button></NavLink>
                                 </Card.Body>
                             </Card>
                         </Col>

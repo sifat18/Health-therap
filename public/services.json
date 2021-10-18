@@ -1,0 +1,56 @@
+[
+    {
+        "key": "B002RL8IYK",
+        "category": "mental",
+        "name": "Adult mental health services",
+        "img": "https://media.istockphoto.com/photos/african-counsellor-sitting-in-front-of-patient-listens-his-complaints-picture-id1252926473?b=1&k=20&m=1252926473&s=170667a&w=0&h=953koWlkgW3j_2S4k7KFjl_zzm5uaKo4TDmoeDwCC0M=",
+        "general": "This system offers treatment for people with serious mental illness, while community mental health services, private psychiatric services and other specialist clinics also offer a range of other options for people who need intensive treatment options.",
+        "para1": "public hospitals - providing treatment for voluntary and compulsory patients through 'acute in-patient wards'",
+        "para2": "community-based services and teams -bridging the gap between in-hospital care and living in the community and include the Acute Community Intervention Service (ACIS), community care units (CCUs), Prevention and Recovery Care services (PARCs) and outpatient clinical treatment",
+        "para3": "Mental Health Community Support Services (MHCSS) - these are managed by non-government organisations and provide assistance with daily activities and help people with severe and enduring mental illness to live successfully in the community"
+    },
+    {
+        "key": "B01LD4MGY4",
+        "category": "mental",
+        "name": "Mental health services for children and young people",
+        "img": "https://media.istockphoto.com/photos/boy-with-developmental-disability-picture-id533744195?b=1&k=20&m=533744195&s=170667a&w=0&h=HQVD8jP6F9mz3h4L6_pd6HgWeBcKkbDsU8Zyrim3KAA=",
+        "general": "We provide specialist mental health services for children and adolescents up to the age of 18 years.Young people between the ages of 16 and 18 may be treated by either a child and adolescent mental health service or an adult service, depending on their needs. Services include:",
+        "para1": "consultation and liaison psychiatry services providing consultation, support and assessment to patients and their families in a health service, usually in paediatric inpatient wards. Patients will have medical illnesses (for example, cystic fibrosis or leukaemia), with associated psychiatric symptoms.",
+        "para2": "acute inpatient services, which offer short-term assessment and in-patient treatment for severe emotional disturbances that cannot be assessed satisfactorily or treated safely and effectively within the community",
+        "para3": "autism assessment offering diagnostic assessment of children with serious developmental disorders such as autism. Some services also provide community consultation and liaison, and link children and their families into appropriate support services in the community including school support"
+    },
+    {
+        "key": "B01LZ2WZGH",
+        "category": "mental",
+        "name": "Mental health services for older people",
+        "img": "https://media.istockphoto.com/photos/caregiver-assist-senior-woman-at-home-picture-id1296176562?b=1&k=20&m=1296176562&s=170667a&w=0&h=gHya2Ee_SnnfngzSvzRra93uSlb7xG76apicnILHvIw=",
+        "general": "Specialist mental health services are available to treat people over the age of 65 and the elderly.These include:",
+        "para1": "Aged persons mental health community teams which provide assessment and treatment, rehabilitation and case management services. Services also provide support to other aged care service providers and education for consumers, families and carers",
+        "para2": "Aged Persons Mental Health (APMH) nursing homes and hostels for people whose mental illness cannot be managed in mainstream aged care residential services",
+        "para3": "Acute in-patient services, which provide short-term management and mental health treatment during an acute phase of mental illness until the person can be treated in the community."
+    },
+    {
+        "key": "B01M18UZF5",
+        "category": "dental",
+        "name": "Preventive Dental Care",
+        "img": "https://media.istockphoto.com/photos/her-teeths-are-perfectperfect-oral-health-picture-id1300124918?b=1&k=20&m=1300124918&s=170667a&w=0&h=nY3j1ujI3IO1Id_nSMopapOWM1Pa82oQLnxlch-0aC0=",
+        "general": "Improper or negligent oral hygiene can lead to the formation of cavities or tooth decay. Individuals with such conditions will experience a range of symptoms including pain, discomfort, difficulty in eating, bad breath & foul taste. At Healthspring, we emphasize on routine dental check-ups and cleaning.",
+        "para1": "Our dentists take proactive measures to help maintain your oral hygiene (e.g. Use of dental sealants - a thin epoxy coating - that prevent the development of cavities in both children and adults). "
+    },
+    {
+        "key": "B01K1IO3QW",
+        "category": "dental",
+        "name": "Smile Enhancement & Restoration",
+        "img": "https://media.istockphoto.com/photos/happy-eldelry-man-sitting-in-a-dental-chiar-picture-id1270497143?b=1&k=20&m=1270497143&s=170667a&w=0&h=FNr0UeGgTTfxNVyQUaAgoewJFLAFJ1_LUlzFvPVmdkY=",
+        "general": "A smile is a curve that sets everything straight! At Healthspring, we know how important your smile is. Teeth that are uneven, chipped, broken, overlapping or widely spaced out can mask the true beauty and radiance of your smile. ",
+        "para1": "Our dentists use state of the art procedures that enhance your smile and boost your confidence. These include bleaching, bonding, gum uplifting and the use of implants, bridges, crowns, braces and laminates. "
+    },
+    {
+        "key": "B01DBGVB7K",
+        "category": "dental",
+        "name": "Gum Disorders",
+        "img": "https://media.istockphoto.com/photos/little-more-and-the-agony-ends-picture-id1262270436?b=1&k=20&m=1262270436&s=170667a&w=0&h=1iIh3ZN6QQj2W9cQJ5fVxttHCMrU_SyMBsSPqGkIOBo=",
+        "general": "Any damage to our gums can lead to the loss of teeth. Common gum disorders include gingivitis, periodontitis, gum recession and abscesses. Bleeding, swelling and oozing of puss are signs of infected gums that need urgent medical attention. Most gum disorders can be prevented if detected and treated at an early stage. ",
+        "para1": "Let our team of experienced dentists provide you with the guidance and care you need in combating gum disorders. "
+    }
+]

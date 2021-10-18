@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import About from './Components/About/About';
+import Details from './Components/Details/Details';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -19,9 +20,8 @@ function App() {
           <Route exact path='/home'><Home></Home> </Route>
           <Route path='/about'> <About></About></Route>
           <Route path='/resource'><Resource></Resource> </Route>
-          <Route exact path='/services'> </Route>
-          <Route exact path='/appointment'> </Route>
-          <Route path='/services/:key'> </Route>
+          <Route path='/appointment'> </Route>
+          <Route path='/services/:key'><Details></Details> </Route>
           <Route path='*'>
             <Nopage></Nopage>
           </Route>
