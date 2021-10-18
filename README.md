@@ -1,6 +1,6 @@
 # Welcome to Health-Therap Project
 
-1## Looking for a good health service? Then visit us at [Health-Therap](https://health-therap.web.app/).
+## Looking for a good health service? Then visit us at [Health-Therap](https://health-therap.web.app/).
 
 ## Health-Therap Overview
 ### Health care is one of basic human rights. So to provide the best services this site was created. This project gathers the excellence to provide you the best health care. The aim is to serve varity off services! This project utilises the React js, react-router and react-bootstrap
