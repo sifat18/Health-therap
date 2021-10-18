@@ -20,7 +20,7 @@ const Resource = () => {
         <>
             <Container fluid>
                 <Row className='resource pt-5'>
-                    <h2>Trusted Health Resources</h2>
+                    <h2 className='text-center'>Trusted Health Resources</h2>
                 </Row>
             </Container>
             <Container fluid className='info'>

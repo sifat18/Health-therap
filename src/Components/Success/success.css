@@ -1,0 +1,6 @@
+.success{
+    background-image: url('./formsite-success-page-format.png');
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100vh;
+}

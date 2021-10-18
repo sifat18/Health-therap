@@ -1,15 +1,10 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import { Accordion, Button, Card, Col, Container, Row } from 'react-bootstrap';
-// import cardImg1 from './hospital_design.jpg';
-// import cardImg2 from './doctor.png';
-// import cardImg3 from './log.png';
 import './Home.css';
 import useServices from '../../hooks/services';
 import { NavLink } from 'react-router-dom';
 const Home = () => {
-    // let cardMsg1 = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium, quibusdam quod quo ipsum amet sit necessitatibus harum aspernatur molestias facilis consequuntur ex nesciunt, fugiat doloremque dolorem eum blanditiis! Labore.";
-    // const homeCard = [{ "img": cardImg1, "msg": cardMsg1 }, { "img": cardImg2, "msg": cardMsg1 }, { "img": cardImg3, "msg": cardMsg1 }]
     const [services] = useServices();
     const dental = services.filter(data => data.category === 'dental')
     const mental = services.filter(data => data.category === 'mental')
@@ -19,11 +14,11 @@ const Home = () => {
             {/* schedule */}
             <Container className='box mb-5 pb-5'>
                 <div>
-                    <h2 className='fs-2 fw-bold mt-3'>Schedule Overview</h2>
+                    <h2 className='text-center fs-2 fw-bold mt-3'>Schedule Overview</h2>
                     <hr className='w-50 mx-auto mb-2 mt-0' />
                     <Row>
                         <Col xs={6}>
-                            <h3 className='fs-4 fw-bold'>Yoga Classes</h3>
+                            <h3 className='text-center mt-3 fs-4 fw-bold'>Yoga Classes</h3>
                             <hr className='w-50 mx-auto mt-0 mb-2' />
                             <div className='text-center'>
                                 <p>Morning Classes ----- 7 am to 8:30 am </p>
@@ -32,7 +27,7 @@ const Home = () => {
                             </div>
                         </Col>
                         <Col xs={6}>
-                            <h3 className='fs-4 fw-bold'>Office Hours</h3>
+                            <h3 className=' text-center mt-3 fs-4 fw-bold'>Office Hours</h3>
                             <hr className='w-50 mx-auto mt-0 mb-2' />
                             <div className='text-center'>
                                 <p>Monday-Friday ----- 9 am to 8:30 pm</p>

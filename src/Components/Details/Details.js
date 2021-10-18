@@ -1,12 +1,19 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import useAuth from '../../context/useAuth';
 import useServices from '../../hooks/services';
 
 const Details = () => {
     const { key } = useParams()
     const [services] = useServices()
     const serviceData = services.find(data => data.key === key)
+    const { isLoading } = useAuth();
+    if (isLoading) {
+
+        return <div className='text-center'><Spinner animation="border" variant="danger" />
+        </div>
+    }
     return (
         <Container className='my-5'>
             <Row className='my-5'>

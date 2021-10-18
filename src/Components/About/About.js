@@ -43,7 +43,7 @@ const About = () => {
             </Container>
             {/* slider */}
             <Container className='my-5 py-5'>
-                <h1 className='fs-1 fw-bold'>Our Medicine Spcialists</h1>
+                <h1 className='text-center fs-1 fw-bold'>Our Medicine Spcialists</h1>
                 <hr className='m-auto w-50 ' />
                 <Row className='mt-5'>
                     <Slider {...settings} >
@@ -51,7 +51,7 @@ const About = () => {
                             <Card key={doctor.key} className='border-0 p-2' style={{ width: '' }}>
                                 <Card.Img variant="top" src={doctor.img} className='img-fluid h-25' />
                                 <Card.Body>
-                                    <Card.Title>{doctor.name}</Card.Title>
+                                    <Card.Title className='text-center fw-bold'>{doctor.name}</Card.Title>
                                     <Card.Text>
                                         {doctor.descript}
                                     </Card.Text>
@@ -64,7 +64,7 @@ const About = () => {
             </Container >
             {/* yoga */}
             <Container className='my-5 py-5'>
-                <h1 className='fs-1 fw-bold'>Yoga Trainers</h1>
+                <h1 className='text-center fs-1 fw-bold'>Yoga Trainers</h1>
                 <hr className='m-auto w-25 ' />
                 <Row className='mt-5'>
                     <Slider {...settings} >
@@ -72,7 +72,7 @@ const About = () => {
                             <Card key={yoga.key} className='border-0 p-2' style={{ width: '' }}>
                                 <Card.Img variant="top" src={yoga.img} className='img-fluid h-25' />
                                 <Card.Body>
-                                    <Card.Title>{yoga.name}</Card.Title>
+                                    <Card.Title className='text-center fw-bold'>{yoga.name}</Card.Title>
                                     <Card.Text>
                                         {yoga.descript}
                                     </Card.Text>
@@ -85,15 +85,15 @@ const About = () => {
             </Container >
             {/* psychological */}
             <Container className='my-5 py-5'>
-                <h1 className='fs-1 fw-bold'>Psychological Mentors</h1>
-                <hr className='m-auto w-25 ' />
+                <h1 className='text-center fs-1 fw-bold'>Psychological Mentors</h1>
+                <hr className='m-auto w-50 ' />
                 <Row className='mt-5'>
                     <Slider {...settings} >
                         {mentalDoc.map(psychiatrist => (
                             <Card key={psychiatrist.key} className='border-0 p-2' style={{ width: '' }}>
                                 <Card.Img variant="top" src={psychiatrist.img} className='img-fluid h-25' />
                                 <Card.Body>
-                                    <Card.Title>{psychiatrist.name}</Card.Title>
+                                    <Card.Title className='text-center fw-bold'>{psychiatrist.name}</Card.Title>
                                     <Card.Text>
                                         {psychiatrist.descript}
                                     </Card.Text>
