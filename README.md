@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Welcome to Health-Therap Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1## Looking for a good health service? Then visit us at [Health-Therap](https://health-therap.web.app/).
 
-## Available Scripts
+## Health-Therap Overview
+### Health care is one of basic human rights. So to provide the best services this site was created. This project gathers the excellence to provide you the best health care. The aim is to serve varity off services! This project utilises the React js, react-router and react-bootstrap
 
-In the project directory, you can run:
+## Health-Therap functionalities
+- varity of health care services are provided
+- Specialized dental and mental treatment services for all
+- Useful Resouces like doctors site, medicine site related information has been given
+- Authentication and authoraization of ensure user privacy
+- Responsive view for mobile and large devices!
+ the project directory, you can run:
 
 ### `npm start`
 
