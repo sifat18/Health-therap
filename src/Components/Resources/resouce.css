@@ -1,14 +1,17 @@
+/* resource body bg */
 .resource{
     background-color: rgba(204, 172, 172, 0.753);
     min-height: 150px;
 
 }
+/* info side side */
 .info{
     background-image: url('https://img.freepik.com/free-vector/clean-medical-background_53876-116875.jpg?size=626&ext=jpg');
     background-position: center;
     background-size: 100% 100%;
     margin-top: -20px;
 }
+/* info li styles */
 .info-body li{
 list-style: none;
 min-height:100px ;
@@ -18,6 +21,7 @@ border-radius: 15px ;
 padding: 20px;
 margin: 10px;
 }
+/* slider btn styles */
 .slick-arrow.slick-prev,
 .slick-arrow.slick-next{
 background:grey;

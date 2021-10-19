@@ -10,6 +10,7 @@ const Banner = () => {
             <Carousel fade fluid >
                 <Carousel.Item>
                     <Row>
+                        {/* first slide */}
                         <Col xs={12} md={8}>
                             <img
                                 className="d-block w-100"
@@ -28,6 +29,8 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <Row>
+                        {/* second slide */}
+
                         <Col className='banner-Text' xs={12} md={4}>
                             <h2 className='fw-bold'>
                                 Primary care built around you
@@ -47,6 +50,8 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <Row>
+                        {/* third slide */}
+
                         <Col xs={12} md={8}>
                             <img
                                 className="d-block w-100"

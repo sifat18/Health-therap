@@ -1,9 +1,11 @@
+/* logo style */
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
+/* nav link styles */
 .header a{
     text-decoration: none;
 }

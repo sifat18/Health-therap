@@ -1,7 +1,10 @@
+/* banner bg */
 .banner{
     background-color: rgba(3, 27, 243, 0.74);
     min-height: 450px;
 }
+/* banner text styles */
+
 .banner-Text{
     text-align: center;
     margin: 100px auto;

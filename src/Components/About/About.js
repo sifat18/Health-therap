@@ -7,7 +7,9 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import useDoctors from '../../hooks/doctors';
 
 const About = () => {
+    // fetching data using hooks
     const [doctors] = useDoctors();
+    // setting for slider
     const settings = {
         dots: true,
         lazyLoad: true,
@@ -17,16 +19,18 @@ const About = () => {
         slidesToScroll: 1,
         initialSlide: 2
     };
+    // dividing by category data
     const medicineDoc = doctors.filter(data => data.category === 'medicine')
     const yogaTeach = doctors.filter(data => data.category === 'yoga')
     const mentalDoc = doctors.filter(data => data.category === 'mental')
 
     return (
         <>
-            {/* about segment */}
+            {/* about top segment segment */}
             <Container>
                 <Row>
-                    <Col xs={12} md={7} className=' mt-5  order-md-1 order-sm-2 '>
+                    {/* top-text */}
+                    <Col xs={12} md={7} className=' mt-5 order-sm-2 order-md-1  '>
                         <h3 className='text-start fs-2 fw-bold'>We support people to do the extraordinary everyday </h3>
                         <div className="d-flex ">
                             <hr className='d-block text-start w-75 me-1 bg-info' />
@@ -36,20 +40,23 @@ const About = () => {
 
                             </div></div>
                     </Col>
-                    <Col xs={12} md={5} className='mt-5 order-md-2 order-sm-1 '>
+                    {/* top-image */}
+
+                    <Col xs={12} md={5} className='mt-5 order-sm-1 order-md-2  '>
                         <img className='d-block w-100 my-5 ' src="https://media.istockphoto.com/photos/healthcare-workers-portrait-picture-id1284636209?b=1&k=20&m=1284636209&s=170667a&w=0&h=j_vm0DELoS5ZhzbqYAI60nHoO57jHlrGIyLgqBs6Wyg=" alt="" />
                     </Col>
                 </Row>
             </Container>
-            {/* slider */}
+            {/* slider for medicine doctors*/}
             <Container className='my-5 py-5'>
                 <h1 className='text-center fs-1 fw-bold'>Our Medicine Spcialists</h1>
                 <hr className='m-auto w-50 ' />
                 <Row className='mt-5'>
                     <Slider {...settings} >
+                        {/* looping from the divided data */}
                         {medicineDoc.map(doctor => (
                             <Card key={doctor.key} className='border-0 p-2' style={{ width: '' }}>
-                                <Card.Img variant="top" src={doctor.img} className='img-fluid h-25' />
+                                <Card.Img variant="top" src={doctor.img} className='picture' />
                                 <Card.Body>
                                     <Card.Title className='text-center fw-bold'>{doctor.name}</Card.Title>
                                     <Card.Text>
@@ -62,15 +69,16 @@ const About = () => {
                     </Slider>
                 </Row >
             </Container >
-            {/* yoga */}
+            {/* yoga slider */}
             <Container className='my-5 py-5'>
                 <h1 className='text-center fs-1 fw-bold'>Yoga Trainers</h1>
                 <hr className='m-auto w-25 ' />
                 <Row className='mt-5'>
                     <Slider {...settings} >
+                        {/* looping from the divided data */}
                         {yogaTeach.map(yoga => (
                             <Card key={yoga.key} className='border-0 p-2' style={{ width: '' }}>
-                                <Card.Img variant="top" src={yoga.img} className='img-fluid h-25' />
+                                <Card.Img variant="top" src={yoga.img} className='picture' />
                                 <Card.Body>
                                     <Card.Title className='text-center fw-bold'>{yoga.name}</Card.Title>
                                     <Card.Text>
@@ -83,15 +91,16 @@ const About = () => {
                     </Slider>
                 </Row >
             </Container >
-            {/* psychological */}
+            {/* psychological  slider */}
             <Container className='my-5 py-5'>
                 <h1 className='text-center fs-1 fw-bold'>Psychological Mentors</h1>
                 <hr className='m-auto w-50 ' />
                 <Row className='mt-5'>
                     <Slider {...settings} >
+                        {/* looping from the divided data */}
                         {mentalDoc.map(psychiatrist => (
                             <Card key={psychiatrist.key} className='border-0 p-2' style={{ width: '' }}>
-                                <Card.Img variant="top" src={psychiatrist.img} className='img-fluid h-25' />
+                                <Card.Img variant="top" src={psychiatrist.img} className='picture' />
                                 <Card.Body>
                                     <Card.Title className='text-center fw-bold'>{psychiatrist.name}</Card.Title>
                                     <Card.Text>

@@ -1,3 +1,4 @@
+/* schedule box styles */
 .box{
     background-color: floralwhite;
     margin: 0px auto;
@@ -9,10 +10,17 @@
     border: 1px solid white; 
     border-radius: 25px;
 }
+/* card styles */
 .zoom {
     transition: transform .2s; 
+    cursor: pointer;
 
+  }
+  .zoom a{
+    text-decoration: none;
+    color: coral;
   }
   
   .zoom:hover {
     transform: scale(1.12);  }
+  

@@ -14,6 +14,7 @@ const Header = () => {
     return (
         <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className='header'>
+                {/* logo */}
                 <NavLink to='/home'><Navbar.Brand className='logo' href="#home">
                     <img
                         src={logo}
@@ -21,16 +22,17 @@ const Header = () => {
                         height="50"
                         className="d-inline-block me-2 align-top "
                         alt="React Bootstrap logo"
-                    />Heath-Therap
+                    />Health-Therap
                 </Navbar.Brand></NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav variant="pills" className="ms-auto">
-
+                        {/* links */}
                         <NavLink to='/home'> <Nav.Link href="#home">Home</Nav.Link></NavLink>
                         <NavLink to='/about'> <Nav.Link href="#about">About</Nav.Link></NavLink>
                         <NavLink to='/resource'> <Nav.Link href="#resource">Resources</Nav.Link></NavLink>
                         <NavLink to='/appointment'> <Nav.Link href="#appointment">Appointment</Nav.Link></NavLink>
+                        {/* conditional rendering */}
                         {user.email &&
                             <Navbar.Text>
                                 Signed in as <a href="#login">{user.displayName}</a>

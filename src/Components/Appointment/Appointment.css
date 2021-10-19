@@ -1,6 +1,8 @@
+/* appointment bg */
 .book{
-    background-color: slategrey;
+    background-color: rgb(159, 183, 209);
 }
+/* form style */
 .inputs{
     display: block;
     box-sizing: border-box;
