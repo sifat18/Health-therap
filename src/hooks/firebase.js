@@ -19,6 +19,7 @@ const useFirebase = () => {
                 setuser(userCredential.user);
                 // ...
                 setName(name);
+                window.location.reload()
             })
             .catch((error) => {
 
@@ -45,6 +46,7 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setuser(userCredential.user);
+
             })
             .catch((error) => {
             }).finally(() => {
