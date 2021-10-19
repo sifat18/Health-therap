@@ -33,9 +33,9 @@ const Header = () => {
                         <NavLink to='/resource'> <Nav.Link href="#resource">Resources</Nav.Link></NavLink>
                         <NavLink to='/appointment'> <Nav.Link href="#appointment">Appointment</Nav.Link></NavLink>
                         {/* conditional rendering */}
-                        {user.email &&
+                        {(user.displayName || user.email) &&
                             <Navbar.Text>
-                                Signed in as <a href="#login">{user.displayName}</a>
+                                Signed in as <a href="#login">{(user.displayName || user.email)}</a>
                             </Navbar.Text>
                         }
                         {user.email && <Nav.Link onClick={logOut}>Logout</Nav.Link>}

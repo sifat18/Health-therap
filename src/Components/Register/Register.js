@@ -10,20 +10,24 @@ const Register = () => {
     const history = useHistory();
     const [email, setemail] = useState('')
     const [pass, setpass] = useState('')
-    const [repassword, setrepassword] = useState('')
+    let repassword;
+    // const [repassword, setrepassword] = useState('')
     const [error, seterror] = useState('')
     const [name, setname] = useState('')
+
     const hadlePassblur = e => {
         console.log(e.target.value);
-        setpass(e.target.value)
+        setpass(e.target.value);
     }
     // getting pass and check if re entered pass matches
     const hadlePass = e => {
         console.log(e.target.value);
-        setrepassword(e.target.value);
+        repassword = e.target.value;
         if (pass === repassword) {
+            console.log(pass, repassword)
             seterror('')
         } else {
+            console.log(pass, repassword)
             seterror('passward doesnt match')
 
         }
@@ -39,7 +43,7 @@ const Register = () => {
         setname(e.target.value)
     }
     // create user
-    const handleRegister = e => {
+    const handleRegister = (e) => {
         e.preventDefault();
         createUser(name, email, pass);
         history.push('/home')
