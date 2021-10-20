@@ -34,7 +34,7 @@ const Login = () => {
     const handleSign = (e) => {
         e.preventDefault();
         loginPass(email, pass);
-        history.push('/home')
+        history.push(redirect_url)
     }
     return (
         <Container className='my-5'>
