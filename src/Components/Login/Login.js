@@ -8,7 +8,7 @@ import pic2 from './login.svg';
 import google from './icons8-google.svg';
 
 const Login = () => {
-    const { googleSign, loginPass, setisLoading } = useAuth()
+    const { googleSign, loginPass, setisLoading, erMsg } = useAuth()
     const location = useLocation()
     const history = useHistory()
     const redirect_url = location.state?.from || '/home'
@@ -34,7 +34,12 @@ const Login = () => {
     const handleSign = (e) => {
         e.preventDefault();
         loginPass(email, pass);
-        history.push(redirect_url)
+        if (erMsg) {
+            history.push(redirect_url);
+        }
+        else {
+            return
+        }
     }
     return (
         <Container className='my-5'>
@@ -43,6 +48,8 @@ const Login = () => {
             <hr className='mx-auto w-50' />
 
             <form className=' pt-3' onSubmit={handleSign}>
+                {erMsg && <span className=' ms-5 ps-5 text-danger text-center'>{erMsg}</span>}
+
                 <input className='inputs my-4 w-50' onBlur={hadleEmailblur} type="email" placeholder='email' name="email" id="email" />
                 <input className='inputs my-4 w-50' onBlur={hadlePassblur} type="password" placeholder='password' name="pass" id="pass" />
                 <button className='inputs btn-danger mt-2 fs-3 w-25' type="submit">Login <img src={pic1} alt="" height='30' width='30' /> </button>

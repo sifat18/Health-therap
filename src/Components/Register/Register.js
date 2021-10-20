@@ -6,7 +6,7 @@ import pic1 from './voting.svg';
 import pic2 from './enter.svg';
 
 const Register = () => {
-    const { createUser } = useAuth();
+    const { createUser, erMsg } = useAuth();
     const history = useHistory();
     const [email, setemail] = useState('')
     const [pass, setpass] = useState('')
@@ -45,7 +45,12 @@ const Register = () => {
     // create user
     const handleRegister = (e) => {
         e.preventDefault();
+        if (pass.length < 6) {
+            seterror('password needs to be atleast 6 characters long');
+            return
+        }
         createUser(name, email, pass);
+        seterror('')
         history.push('/home')
     }
     return (
@@ -59,6 +64,7 @@ const Register = () => {
                 <input required className='inputs my-4 w-50' type="password" onBlur={hadlePassblur} placeholder='password' name="pass" id="pass" />
                 <input required className='inputs my-4 w-50' type="password" onBlur={hadlePass} placeholder='re-enter password' name="re-pass" id="pass" />
                 {error ? <p className='text-danger text-center'>{error}</p> : ''}
+                {erMsg ? <p className='text-danger text-center'>{erMsg}</p> : ''}
 
                 <button className='inputs btn-danger w-25 mt-2 fs-3 mb-5'>Register <img src={pic2} alt="" height='30' width='30' /></button>
             </form>

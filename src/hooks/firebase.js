@@ -5,6 +5,7 @@ import initAuth from "../Firebase/firebase.init";
 initAuth();
 const useFirebase = () => {
     const [user, setuser] = useState({})
+    const [erMsg, seterMsg] = useState('')
     const [isLoading, setisLoading] = useState(true);
 
 
@@ -19,10 +20,11 @@ const useFirebase = () => {
                 setuser(userCredential.user);
                 // ...
                 setName(name);
+                seterMsg('');
                 window.location.reload()
             })
             .catch((error) => {
-
+                seterMsg(error.message);
             }).finally(() => {
                 setisLoading(false)
 
@@ -46,9 +48,10 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setuser(userCredential.user);
-
+                seterMsg('')
             })
             .catch((error) => {
+                seterMsg(error.message)
             }).finally(() => {
                 setisLoading(false)
 
@@ -86,7 +89,8 @@ const useFirebase = () => {
         createUser,
         loginPass,
         logOut,
-        googleSign
+        googleSign,
+        erMsg
     }
 }
 export default useFirebase;
